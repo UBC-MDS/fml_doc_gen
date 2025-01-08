@@ -8,6 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+poetry = "^2.0.0"
 
 [tool.semantic_release]
 version_toml = [
