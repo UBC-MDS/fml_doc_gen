@@ -20,6 +20,9 @@ docstring = generate_docstring_template(sample_function)
 print(docstring)
 ```
 
+## Authors
+Farhan Bin Faisal, Michael Suriawan, Lukman Lateef
+
 ## Contributing
 
 Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
