@@ -1,16 +1,24 @@
-# fml
+# fml_doc_generator
 
 doc string generator
 
 ## Installation
 
 ```bash
-$ pip install fml
+$ pip install fml_doc_generator
 ```
 
 ## Usage
+```
+from fml import generate_docstring_template
 
-- TODO
+def sample_function(x, y):
+    return x + y
+
+# Generate a docstring template for the sample function
+docstring = generate_docstring_template(sample_function)
+print(docstring)
+```
 
 ## Contributing
 
@@ -18,8 +26,8 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## License
 
-`fml` was created by Farhan Faisal. It is licensed under the terms of the MIT license.
+`fml_doc_generator` was created by Farhan Faisal, Lukman Lateef, and Michael Suriawan. It is licensed under the terms of the MIT license.
 
 ## Credits
 
-`fml` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+`fml_doc_generator` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
