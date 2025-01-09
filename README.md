@@ -1,14 +1,12 @@
 # fml_doc_generator
 
-doc string generator
-
 ## Summary
 
 `fml_doc_generator` is a Python package designed to simplify the process of writing docstrings for user-defined functions. It offers an automated way to generate docstring templates or fully detailed docstrings through integration with the OpenAI API. By streamlining documentation, it helps developers save time, improve code readability, and maintain consistent documentation standards across projects.
 
 ## Functions Included
 
-- **`generate_docstring_template(func: Callable, auto_generate: bool = False, output_file: str = None) -> str`**: 
+- **`generate_docstring_template(func_file: str, output_file: str, auto_generate: bool = False, ) -> str`**: 
   The main end-user function that generates either a docstring template with placeholders or a fully detailed docstring if `auto_generate` is set to `True`.
 
 - **`read_user_function(func: Callable) -> str`**: 
@@ -29,8 +27,10 @@ doc string generator
 If you are aware of a similar tool, feel free to contribute to our documentation by suggesting it!
 
 
-## Authors
-Farhan Bin Faisal, Michael Suriawan, Lukman Lateef
+## Contributors
+- Farhan Bin Faisal  
+- Michael Suriawan  
+- Lukman Lateef  
 
 ## Contributing
 
