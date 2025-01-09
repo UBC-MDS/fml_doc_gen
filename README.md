@@ -6,7 +6,7 @@
 
 ## Functions Included
 
-- **`generate_docstring_template(func_file: str, output_file: str, auto_generate: bool = False, ) -> str`**: 
+- **`generate_docstring_template(func: Callable, output_file: str, auto_generate: bool = False) -> str`**: 
   The main end-user function that generates either a docstring template with placeholders or a fully detailed docstring if `auto_generate` is set to `True`.
 
 - **`read_user_function(func: Callable) -> str`**: 
