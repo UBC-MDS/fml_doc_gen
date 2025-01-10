@@ -1,0 +1,26 @@
+name: 'fml'
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - ipykernel
+  - nb_conda_kernels
+  - scipy
+  - matplotlib>=3.2.2
+  - scikit-learn
+  - requests>=2.24.0
+  - graphviz
+  - python-graphviz
+  - eli5
+  - jinja2
+  - nltk
+  - imbalanced-learn
+  - quarto=1.5.57
+  - sphinx
+  - sphinx-rtd-theme
+  - sphinx-autodoc-typehints
+  - pip:
+    - mglearn
+    - spacymoji

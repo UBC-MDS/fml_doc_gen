@@ -1,8 +1,8 @@
-# fml_doc_generator
+# fml_doc_gen
 
 ## Summary
 
-`fml_doc_generator` is a Python package designed to simplify the process of writing docstrings for user-defined functions. It offers an automated way to generate docstring templates or fully detailed docstrings through integration with the OpenAI API. By streamlining documentation, it helps developers save time, improve code readability, and maintain consistent documentation standards across projects.
+`fml_doc_gen` is a Python package designed to simplify the process of writing docstrings for user-defined functions. It offers an automated way to generate docstring templates or fully detailed docstrings through integration with the OpenAI API. By streamlining documentation, it helps developers save time, improve code readability, and maintain consistent documentation standards across projects.
 
 ## Functions Included
 
@@ -22,7 +22,7 @@
 
 ## Python Ecosystem
 
-`fml_doc_generator` fits into the Python ecosystem as a specialized tool for automating function documentation. While other Python packages like [`sphinx`](https://www.sphinx-doc.org/) and [`pydoc`](https://docs.python.org/3/library/pydoc.html) exist for generating documentation from docstrings, there are no widely known packages that automatically generate docstrings themselves using AI. This makes `fml_doc_generator` unique in its approach by leveraging OpenAI's capabilities to produce high-quality docstrings with minimal effort from the developer.
+`fml_doc_gen` fits into the Python ecosystem as a specialized tool for automating function documentation. While other Python packages like [`sphinx`](https://www.sphinx-doc.org/) and [`pydoc`](https://docs.python.org/3/library/pydoc.html) exist for generating documentation from docstrings, there are no widely known packages that automatically generate docstrings themselves using AI. This makes `fml_doc_gen` unique in its approach by leveraging OpenAI's capabilities to produce high-quality docstrings with minimal effort from the developer.
 
 If you are aware of a similar tool, feel free to contribute to our documentation by suggesting it!
 
@@ -38,8 +38,8 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## License
 
-`fml_doc_generator` was created by Farhan Faisal, Lukman Lateef, and Michael Suriawan. It is licensed under the terms of the MIT license.
+`fml_doc_gen` was created by Farhan Faisal, Lukman Lateef, and Michael Suriawan. It is licensed under the terms of the MIT license.
 
 ## Credits
 
-`fml_doc_generator` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+`fml_doc_gen` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
