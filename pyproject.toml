@@ -13,6 +13,10 @@ poetry = "^2.0.0"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"
 
+[tool.poetry.packages]
+include = "FML_doc_generator"
+from = "src"
+
 [tool.semantic_release]
 version_toml = [
     "pyproject.toml:tool.poetry.version",
