@@ -1,14 +1,17 @@
 [tool.poetry]
-name = "fml"
+name = "FML_doc_generator"
 version = "0.0.1"
 description = "doc string generator"
-authors = ["Farhan Faisal"]
+authors = ["Farhan Faisal", "Michael Suriawan", "Lukman Lateef"]
 license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
 poetry = "^2.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
 
 [tool.semantic_release]
 version_toml = [

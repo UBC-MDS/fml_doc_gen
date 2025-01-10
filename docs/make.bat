@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=fml
+set SPHINXPROJ=FML_doc_generator
 
 if "%1" == "" goto help
 
