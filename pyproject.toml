@@ -16,6 +16,9 @@ autoapi = "^2.0.1"
 pytest = "^8.3.4"
 pytest-cov = "^6.0.0"
 sphinx = "^8.1.3"
+sphinx-autoapi = "^3.4.0"
+sphinx-rtd-theme = "^3.0.2"
+jupyter = "^1.1.1"
 
 [tool.semantic_release]
 version_toml = [
