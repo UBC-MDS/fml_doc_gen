@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "FML_doc_generator"
+name = "fml_doc_gen"
 version = "0.0.1"
 description = "doc string generator"
 authors = ["Farhan Faisal", "Michael Suriawan", "Lukman Lateef"]
@@ -12,10 +12,6 @@ poetry = "^2.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"
-
-[tool.poetry.packages]
-include = "FML_doc_generator"
-from = "src"
 
 [tool.semantic_release]
 version_toml = [

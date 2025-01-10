@@ -3,7 +3,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = fml
+SPHINXPROJ    = fml_doc_gen
 SOURCEDIR     = .
 BUILDDIR      = _build
 
