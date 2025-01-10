@@ -3,11 +3,10 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.9
+  - python=3.10
   - pip
   - ipykernel
   - nb_conda_kernels
-  - otter-grader=6.*
   - scipy
   - matplotlib>=3.2.2
   - scikit-learn
@@ -19,6 +18,9 @@ dependencies:
   - nltk
   - imbalanced-learn
   - quarto=1.5.57
+  - sphinx
+  - sphinx-rtd-theme
+  - sphinx-autodoc-typehints
   - pip:
     - mglearn
     - spacymoji
