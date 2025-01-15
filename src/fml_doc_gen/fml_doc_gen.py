@@ -1,4 +1,6 @@
 from typing import Callable
+from fml_doc_gen import FunctionDTO
+
 
 def generate_docstring_template(func: Callable, output_file: str, auto_generate: bool = False) -> str:
     """
@@ -39,7 +41,7 @@ def generate_docstring_template(func: Callable, output_file: str, auto_generate:
     pass
 
 
-def read_user_function(func: Callable) -> str:
+def read_user_function(func: Callable) -> FunctionDTO:
     """
     Reads the source code of the user-provided function and extracts its signature and existing docstring (if any).
 
@@ -65,7 +67,7 @@ def read_user_function(func: Callable) -> str:
     pass
 
 
-def generate_template(func_signature: str) -> str:
+def generate_template(func_signature: FunctionDTO) -> str:
     """
     Generates a docstring template with placeholders for parameters, return values, and a brief description 
     based on the provided function signature.
