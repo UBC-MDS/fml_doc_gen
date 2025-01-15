@@ -4,7 +4,6 @@ from fml_doc_gen import write_docstring_to_file
 from fml_doc_gen import read_user_function
 from fml_doc_gen import generate_template
 
-
 def generate_docstring_template(func: Callable, output_file: str, auto_generate: bool = False) -> str:
     """
     Generates a docstring template for a given user-defined function.
