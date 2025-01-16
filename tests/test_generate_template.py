@@ -62,6 +62,6 @@ def test_generate_template_name_params_no_output():
     and parameters with specified types are provided, but no output type provided.
     """
     f = FunctionDTO(name = "square", output="int", inputs=[('base', 'int'), ('pow', 'int')])
-    expected = '\n    square: \n    ### INSERT FUNCTION DEFINITION HERE ###\n    \n    Parameters:\n    ----------\n    \n    base: int\n    ### INSERT PARAMETER DEFINITION HERE ###\n    \n\n    pow: int\n    ### INSERT PARAMETER DEFINITION HERE ###\n    \n\n\n    \n      \n    Examples:\n    --------\n    ### INSERT FUNCTION EXAMPLE USAGES HERE ###\n'
+    expected = '\n    square: \n    ### INSERT FUNCTION DEFINITION HERE ###\n    \n    Parameters:\n    ----------\n    \n    base: int\n    ### INSERT PARAMETER DEFINITION HERE ###\n    \n\n    pow: int\n    ### INSERT PARAMETER DEFINITION HERE ###\n    \n\n\n    \n    Returns:\n    -------\n    int\n        ### INSERT ADDITIONAL FUNCTION OUTPUT INFORMATION HERE ###\n\n      \n    Examples:\n    --------\n    ### INSERT FUNCTION EXAMPLE USAGES HERE ###\n'
     actual = generate_template(f)
     assert expected == actual
