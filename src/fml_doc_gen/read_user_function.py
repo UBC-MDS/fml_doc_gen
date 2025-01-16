@@ -1,5 +1,5 @@
 from typing import Callable
-from func_dto import FunctionDTO
+from fml_doc_gen.func_dto import FunctionDTO
 import inspect
 
 def read_user_function(func: Callable) -> FunctionDTO:
@@ -36,11 +36,10 @@ def read_user_function(func: Callable) -> FunctionDTO:
             thing.split(':')[1].strip() if ':' in thing else None
         ) for thing in inputs
     ]
-
-    
+   
     if '->' in function_header:
         return_type = function_header.split('->')[1].split(':')[0].strip()
-    
+   
     if len(inputs) == 1 and inputs[0] == ('', None):
         inputs = []
 
