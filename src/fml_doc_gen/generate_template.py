@@ -33,6 +33,30 @@ DOCSTRING_OUTPUT_TEMPLATE = """
 DOCSTRING_PARAMETER_TYPE_PLACEHOLDER = "..."
 
 def generate_template(function_signature: FunctionDTO) -> str:
+    """
+    Generates a formatted docstring template for a function based on its name, inputs, and output type.
+
+    Args:
+        function_signature (FunctionDTO): 
+            An object containing metadata about the function, including its name, input parameters, 
+            and output type. The `inputs` attribute should be a list of tuples where each tuple contains 
+            the name and type of a parameter.
+
+    Returns:
+        str: A string representing the generated docstring template for the function, formatted 
+        with placeholders for detailed parameter and return value descriptions.
+
+    Raises:
+        ValueError: If the `name` attribute of the `function_signature` is empty.
+
+    Example:
+        >>> function_signature = FunctionDTO(
+        ...     name="add_numbers", 
+        ...     output="int", 
+        ...     inputs=[("a", "int"), ("b", "int")]
+        ... )
+        >>> generate_template(function_signature)
+    """
     # Name logic
     if not function_signature.name:
         raise ValueError("The name of the function cannot be empty!")
