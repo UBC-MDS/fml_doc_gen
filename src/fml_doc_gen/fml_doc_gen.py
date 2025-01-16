@@ -1,8 +1,5 @@
 from typing import Callable
-from func_dto import FunctionDTO
-import write_docstring_to_file
-import read_user_function
-import generate_template
+from fml_doc_gen.func_dto import FunctionDTO
 
 def generate_docstring_template(func: Callable, output_file: str, auto_generate: bool = False) -> str:
     """

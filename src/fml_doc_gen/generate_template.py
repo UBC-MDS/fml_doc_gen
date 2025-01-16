@@ -1,4 +1,5 @@
-from func_dto import FunctionDTO
+from typing import Callable
+from fml_doc_gen.func_dto import FunctionDTO
 
 DOCSTRING_TEMPLATE = """
     {function_name}: 
