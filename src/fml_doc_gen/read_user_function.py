@@ -1,6 +1,6 @@
 from typing import Callable
-from fml_doc_gen import FunctionDTO
-
+from func_dto import FunctionDTO
+import inspect
 
 def read_user_function(func: Callable) -> FunctionDTO:
     """
@@ -24,6 +24,24 @@ def read_user_function(func: Callable) -> FunctionDTO:
     >>> read_user_function(example_func)
     'example_func(a, b)'
     """
+    source_lines = inspect.getsourcelines(func)
+    function_header = source_lines[0][0].strip()
 
-    pass
+    name = function_header.split('(')[0].split(' ')[1]
+    return_type = None
+    inputs = function_header.split('(')[1].split(')')[0].split(',')
+    inputs = [
+        (
+            thing.split(':')[0].strip(), 
+            thing.split(':')[1].strip() if ':' in thing else None
+        ) for thing in inputs
+    ]
 
+    
+    if '->' in function_header:
+        return_type = function_header.split('->')[1].split(':')[0].strip()
+    
+    if len(inputs) == 1 and inputs[0] == ('', None):
+        inputs = []
+
+    return FunctionDTO(name, output = return_type, inputs = inputs)

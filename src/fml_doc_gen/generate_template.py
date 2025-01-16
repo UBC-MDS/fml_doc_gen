@@ -1,5 +1,5 @@
 from typing import Callable
-from fml_doc_gen import FunctionDTO
+from fml_doc_gen.func_dto import FunctionDTO
 
 def generate_template(func_signature: FunctionDTO) -> str:
     """
