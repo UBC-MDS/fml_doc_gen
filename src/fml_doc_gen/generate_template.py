@@ -57,6 +57,9 @@ def generate_template(function_signature: FunctionDTO) -> str:
         ... )
         >>> generate_template(function_signature)
     """
+    if not isinstance(function_signature, FunctionDTO):
+        raise TypeError(f"Expected input to be FunctionDTO, got {type(function_signature)}")
+    
     # Name logic
     if not function_signature.name:
         raise ValueError("The name of the function cannot be empty!")
