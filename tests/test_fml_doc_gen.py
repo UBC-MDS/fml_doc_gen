@@ -37,7 +37,7 @@ def valid_docstring():
 
 # We only need one integraion test here for happy-path testing since every other functionalities have already been tested!
 def test_generate_docstring_template():
-    def square(base: int, pow: str) -> int:
+    def square(base: int, pow: int) -> int:
         return base**pow
     
     with NamedTemporaryFile(suffix=".txt",delete=False) as temp_file:
