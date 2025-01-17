@@ -41,7 +41,6 @@ def test_write_to_valid_file(valid_docstring):
             os.remove(file_path)
 
 
-
 def test_invalid_directory(valid_docstring):
     """Test writing to a file in a non-existent directory."""
     with TemporaryDirectory() as temp_dir:
