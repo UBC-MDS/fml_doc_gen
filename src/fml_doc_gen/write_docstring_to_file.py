@@ -41,10 +41,10 @@ def write_docstring_to_file(docstring: str, output_file: str) -> None:
 
     output_dir = os.path.dirname(output_file) or "."
     if os.path.exists(output_dir):
-         raise ValueError(f"This directory '{output_dir}' does not exist.")
+        raise ValueError(f"This directory '{output_dir}' does not exist.")
     
     if not os.access(output_dir, os.W_OK):
-            raise ValueError(f"This directory '{output_dir}' is not writable")
+        raise ValueError(f"This directory '{output_dir}' is not writable")
         
     try:
         with open(output_dir, 'w') as file:
