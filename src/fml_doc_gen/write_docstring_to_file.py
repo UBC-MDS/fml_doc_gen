@@ -32,7 +32,7 @@ def write_docstring_to_file(docstring: str, output_file: str) -> None:
     # This writes the docstring to 'docstring_output.txt'
     """
 
-    if not docstring.strip():
+    if not isinstance(docstring, str) or not docstring.strip():
         raise ValueError("Could not generate docstring, please ensure your function is well defined")
     
     print("Generated Docstring:\n")
