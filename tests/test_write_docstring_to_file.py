@@ -8,17 +8,19 @@ from fml_doc_gen.write_docstring_to_file import write_docstring_to_file
 def valid_docstring():
     """Fixture for a valid docstring."""
     return """
+    Writes the generated docstring to a specified output file.
+
     Parameters
     ----------
-    a : int
-        Description of parameter a.
-    b : int
-        Description of parameter b.
+    docstring : str
+        The docstring to be written to the file.
+    output_file : str
+        The path to the output file.
 
     Returns
     -------
-    int
-        Description of the return value.
+    None
+        This function does not return anything.
     """
 
 @pytest.fixture
@@ -27,29 +29,26 @@ def empty_docstring():
     return "   "
 
 def test_print_only(valid_docstring, capsys):
-    """Test that the docstring prints to the screen."""
+    """Test that the docstring prints to the screen"""
     write_docstring_to_file(valid_docstring)
     captured = capsys.readouterr()
     assert "Generated Docstring:" in captured.out
     assert valid_docstring.strip() in captured.out
 
 def test_write_to_valid_file(valid_docstring):
-    """Test writing the docstring to a valid file."""
+    """Test writing the docstring to a valid file"""
 
     with NamedTemporaryFile(suffix=".txt",delete=False) as temp_file:
-        file_path = temp_file.name  # Get the temporary file path
+        file_path = temp_file.name  
 
     try:
         write_docstring_to_file(valid_docstring, output_file=file_path)
 
-        # Read back the content from the file
         with open(file_path, "r") as file:
             content = file.read()
 
-        # Assert the content matches the expected docstring
         assert content.strip() == valid_docstring.strip()
     finally:
-        # Cleanup: Ensure the temporary file is removed
         if os.path.exists(file_path):
             os.remove(file_path)
 
@@ -69,10 +68,11 @@ def test_invalid_directory(valid_docstring):
 def test_non_writable_directory(valid_docstring):
     """Test writing to a file in a non-writable directory."""
     with TemporaryDirectory() as temp_dir:
-        os.chmod(temp_dir, 0o500)  # Make the directory non-writable
+        # Make the temp_dir directory non-writable
+        os.chmod(temp_dir, 0o500)  
         file_path = os.path.join(temp_dir, "docstring_output.txt")
         try:
             with pytest.raises(ValueError, match=f"This directory '{temp_dir}' is not writable"):
                 write_docstring_to_file(valid_docstring, output_file=file_path)
         finally:
-            os.chmod(temp_dir, 0o700)  # Restore permissions for cleanup
+            os.chmod(temp_dir, 0o700)  
