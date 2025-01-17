@@ -33,7 +33,7 @@ def write_docstring_to_file(docstring: str, output_file: str = None) -> None:
     """
 
     if not isinstance(docstring, str) or not docstring.strip():
-        raise ValueError("Could not generate docstring, please ensure your function is well defined")
+        raise ValueError("The docstring is empty, None, or contains only whitespace")
     
     print("Generated Docstring:\n")
     print(docstring)

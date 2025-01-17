@@ -35,14 +35,11 @@ def test_print_only(valid_docstring, capsys):
 
 def test_write_to_valid_file(valid_docstring):
     """Test writing the docstring to a valid file."""
-    import tempfile
 
-    # Create a temporary file using a context manager
-    with tempfile.NamedTemporaryFile(suffix=".txt",delete=False) as temp_file:
+    with NamedTemporaryFile(suffix=".txt",delete=False) as temp_file:
         file_path = temp_file.name  # Get the temporary file path
 
     try:
-        # Write the docstring to the temporary file
         write_docstring_to_file(valid_docstring, output_file=file_path)
 
         # Read back the content from the file
@@ -58,7 +55,7 @@ def test_write_to_valid_file(valid_docstring):
 
 def test_empty_docstring(empty_docstring):
     """Test that an empty or whitespace-only docstring raises a ValueError."""
-    with pytest.raises(ValueError, match="The docstring is empty, None, or contains only whitespace."):
+    with pytest.raises(ValueError, match="The docstring is empty, None, or contains only whitespace"):
         write_docstring_to_file(empty_docstring)
 
 def test_invalid_directory(valid_docstring):
