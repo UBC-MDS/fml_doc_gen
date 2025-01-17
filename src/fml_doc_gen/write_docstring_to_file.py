@@ -1,5 +1,6 @@
+import os
 
-def write_docstring_to_file(docstring: str, output_file: str) -> None:
+def write_docstring_to_file(docstring: str, output_file: str = None) -> None:
     """
     Writes the generated docstring to a specified output file.
 
@@ -31,4 +32,22 @@ def write_docstring_to_file(docstring: str, output_file: str) -> None:
     # This writes the docstring to 'docstring_output.txt'
     """
 
-    pass
+
+    print(docstring)
+    print("\n*** End of Docstring ***\n")
+
+    if output_file:
+        output_dir = os.path.dirname(output_file) or "."
+        if not os.path.exists(output_dir):
+            raise ValueError(f"This directory '{output_dir}' does not exist.")
+        
+        if not os.access(output_dir, os.W_OK):
+            raise ValueError(f"This directory '{output_dir}' is not writable")
+            
+        try:
+            with open(output_file, 'w') as file:
+                file.write(docstring)
+        except ValueError as e:
+            print(f"An error occurred while writing to the file: {e}")
+
+        
