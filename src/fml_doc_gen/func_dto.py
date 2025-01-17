@@ -1,5 +1,6 @@
 from typing import List, Optional, Tuple
 
+
 class FunctionDTO:
     def __init__(self, name: Optional[str] = "", output: Optional[str] = None, inputs: Optional[List[Tuple[str, str]]] = []):
         self.name = name

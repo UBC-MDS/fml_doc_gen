@@ -1,5 +1,5 @@
-from typing import Callable
 from fml_doc_gen.func_dto import FunctionDTO
+
 
 DOCSTRING_TEMPLATE = """
     {function_name}: 
@@ -32,6 +32,7 @@ DOCSTRING_OUTPUT_TEMPLATE = """
 """
 
 DOCSTRING_PARAMETER_TYPE_PLACEHOLDER = "..."
+
 
 def generate_template(function_signature: FunctionDTO) -> str:
     """
