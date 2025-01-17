@@ -32,10 +32,7 @@ def write_docstring_to_file(docstring: str, output_file: str = None) -> None:
     # This writes the docstring to 'docstring_output.txt'
     """
 
-    if not isinstance(docstring, str) or not docstring.strip():
-        raise ValueError("The docstring is empty, None, or contains only whitespace")
-    
-    print("Generated Docstring:\n")
+
     print(docstring)
     print("\n*** End of Docstring ***\n")
 
@@ -50,8 +47,7 @@ def write_docstring_to_file(docstring: str, output_file: str = None) -> None:
         try:
             with open(output_file, 'w') as file:
                 file.write(docstring)
-            print(f"Docstring successfully written to {output_file}")
-        except Exception as e:
+        except ValueError as e:
             print(f"An error occurred while writing to the file: {e}")
 
         
