@@ -1,7 +1,8 @@
 import os
+from tempfile import NamedTemporaryFile, TemporaryDirectory
 import pytest
 from fml_doc_gen.write_docstring_to_file import write_docstring_to_file
-from tempfile import NamedTemporaryFile, TemporaryDirectory
+
 
 
 @pytest.fixture
