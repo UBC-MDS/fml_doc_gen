@@ -1,7 +1,10 @@
-from typing import Callable
-from fml_doc_gen.func_dto import FunctionDTO
+from typing import Callable, Optional
+from fml_doc_gen.read_user_function import read_user_function
+from fml_doc_gen.generate_template import generate_template
+from fml_doc_gen.write_docstring_to_file import write_docstring_to_file
 
-def generate_docstring_template(func: Callable, output_file: str, auto_generate: bool = False) -> str:
+
+def generate_docstring_template(func: Callable, output_file: Optional[str], auto_generate: Optional[bool] = False) -> str:
     """
     Generates a docstring template for a given user-defined function.
 
@@ -37,4 +40,12 @@ def generate_docstring_template(func: Callable, output_file: str, auto_generate:
     \"\"\"
     """
     
-    pass
+    f_dto = read_user_function(func)
+
+    # TODO: Call openAI API here one day . . .
+    docstring = generate_template(f_dto) if not auto_generate else "CALL OPEN AI API HERE"
+    
+    if output_file:
+        write_docstring_to_file(docstring = docstring, output_file = output_file)
+    
+    return docstring

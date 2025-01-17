@@ -2,6 +2,7 @@ from typing import Callable
 from fml_doc_gen.func_dto import FunctionDTO
 import inspect
 
+
 def read_user_function(func: Callable) -> FunctionDTO:
     """
     Reads the source code of the user-provided function and extracts its signature and existing docstring (if any).
