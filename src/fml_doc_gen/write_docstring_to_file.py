@@ -1,4 +1,4 @@
-from fml_doc_gen import generate_template
+import os
 
 def write_docstring_to_file(docstring: str, output_file: str) -> None:
     """
@@ -41,14 +41,16 @@ def write_docstring_to_file(docstring: str, output_file: str) -> None:
 
     output_dir = os.path.dirname(output_file) or "."
     if os.path.exists(output_dir):
-        if not os.access(output_dir, os.W_OK):
+         raise ValueError(f"This directory '{output_dir}' does not exist.")
+    
+    if not os.access(output_dir, os.W_OK):
             raise ValueError(f"This directory '{output_dir}' is not writable")
-        else:
-            try:
-                with open(output_dir, 'w') as file:
-                    file.write(docstring)
-                print(f"Docstring successfully written to {output_dir}")
-            except Exception as e:
-                print(f"An error occurred while writing to the file: {e}")
-    else:
-        raise ValueError(f"This directory '{output_dir}' does not exist.")
+        
+    try:
+        with open(output_dir, 'w') as file:
+            file.write(docstring)
+        print(f"Docstring successfully written to {output_dir}")
+    except Exception as e:
+        print(f"An error occurred while writing to the file: {e}")
+
+        
