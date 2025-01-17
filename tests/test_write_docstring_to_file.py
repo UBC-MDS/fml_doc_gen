@@ -37,7 +37,6 @@ def test_print_only(valid_docstring, capsys):
 
 def test_write_to_valid_file(valid_docstring):
     """Test writing the docstring to a valid file"""
-
     with NamedTemporaryFile(suffix=".txt",delete=False) as temp_file:
         file_path = temp_file.name  
 
@@ -68,7 +67,7 @@ def test_invalid_directory(valid_docstring):
 def test_non_writable_directory(valid_docstring):
     """Test writing to a file in a non-writable directory."""
     with TemporaryDirectory() as temp_dir:
-        # Make the temp_dir directory non-writable
+        # Make the temp_dir directory non writable
         os.chmod(temp_dir, 0o500)  
         file_path = os.path.join(temp_dir, "docstring_output.txt")
         try:
