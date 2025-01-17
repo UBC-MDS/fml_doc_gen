@@ -1,3 +1,4 @@
+from fml_doc_gen import generate_template
 
 def write_docstring_to_file(docstring: str, output_file: str) -> None:
     """
@@ -31,4 +32,11 @@ def write_docstring_to_file(docstring: str, output_file: str) -> None:
     # This writes the docstring to 'docstring_output.txt'
     """
 
-    pass
+    print("Generated Docstring:\n")
+    print(docstring)
+    print("\n*** End of Docstring ***\n")
+
+    
+    if isinstance(docstring, str) & len(output_file) > 0:
+        doc_string = open(f"./{output_file}/docstring_output.txt")
+        return print(doc_string)
