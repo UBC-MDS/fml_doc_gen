@@ -33,7 +33,7 @@ def write_docstring_to_file(docstring: str, output_file: str) -> None:
     """
 
     if not docstring.strip():
-        raise ValueError("Could not generate docstring, please check your function is well defined")
+        raise ValueError("Could not generate docstring, please ensure your function is well defined")
     
     print("Generated Docstring:\n")
     print(docstring)
