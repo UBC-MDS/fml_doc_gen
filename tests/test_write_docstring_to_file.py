@@ -26,38 +26,39 @@ def valid_docstring():
 @pytest.fixture
 def empty_docstring():
     """Fixture for an empty docstring."""
-    return " "
+    return "   "
 
 @pytest.fixture
-def empty_docstring():
-    """Fixture for an empty docstring."""
-    return "   "
+def output_file():
+    """Generate test output_file"""
+    with NamedTemporaryFile(delete=False) as temp_file:
+        file_path = temp_file.name
+    return file_path
+    
 
 def test_print_only(valid_docstring, capsys):
     """Test that the docstring prints to the screen."""
-    write_docstring_to_file(valid_docstring)
+    write_docstring_to_file(valid_docstring, output_file)
     captured = capsys.readouterr()
     assert "Generated Docstring:" in captured.out
     assert valid_docstring.strip() in captured.out
 
 def test_write_to_valid_file(valid_docstring):
     """Test writing the docstring to a valid file."""
-    with NamedTemporaryFile(delete=False) as temp_file:
-        file_path = temp_file.name
 
     try:
-        write_docstring_to_file(valid_docstring, output_file=file_path)
-        with open(file_path, "r") as file:
+        write_docstring_to_file(valid_docstring, output_file=output_file)
+        with open(output_file, "r") as file:
             content = file.read()
         assert content.strip() == valid_docstring.strip()
     finally:
-        if os.path.exists(file_path):
-            os.remove(file_path)
+        if os.path.exists(output_file):
+            os.remove(output_file)
 
 def test_empty_docstring(empty_docstring):
     """Test that an empty or whitespace-only docstring raises a ValueError."""
     with pytest.raises(ValueError, match="The docstring is empty, None, or contains only whitespace."):
-        write_docstring_to_file(empty_docstring)
+        write_docstring_to_file(empty_docstring,output_file)
 
 def test_invalid_directory(valid_docstring):
     """Test writing to a file in a non-existent directory."""
