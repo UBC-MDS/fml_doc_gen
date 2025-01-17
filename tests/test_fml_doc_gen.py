@@ -36,7 +36,7 @@ def valid_docstring():
     """
 
 # We only need one integraion test here for happy-path testing since every other functionalities have already been tested!
-def test_generate_docstring_template():
+def test_generate_docstring_template(valid_docstring):
     def square(base: int, pow: int) -> int:
         return base**pow
     
