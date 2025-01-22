@@ -43,7 +43,7 @@ def generate_docstring_template(func: Callable, output_file: Optional[str], auto
     f_dto = read_user_function(func)
 
     # TODO: Call openAI API here one day . . .
-    docstring = generate_template(f_dto) if not auto_generate else "CALL OPEN AI API HERE"
+    docstring = generate_template(f_dto) if not auto_generate else "AUTO GENERATE IS NOT AVAILABLE YET!"
     
     if output_file:
         write_docstring_to_file(docstring = docstring, output_file = output_file)
