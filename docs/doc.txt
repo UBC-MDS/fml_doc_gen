@@ -1,0 +1,26 @@
+
+    square: 
+    ### INSERT FUNCTION DEFINITION HERE ###
+    
+    Parameters:
+    ----------
+    
+    base: int
+    ### INSERT PARAMETER DEFINITION HERE ###
+    
+
+    pow: int
+    ### INSERT PARAMETER DEFINITION HERE ###
+    
+
+
+    
+    Returns:
+    -------
+    int
+        ### INSERT ADDITIONAL FUNCTION OUTPUT INFORMATION HERE ###
+
+      
+    Examples:
+    --------
+    ### INSERT FUNCTION EXAMPLE USAGES HERE ###
