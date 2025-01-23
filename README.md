@@ -1,6 +1,6 @@
 # fml_doc_gen
 
-[![Documentation Status](https://fml-doc-gen.readthedocs.io/projects/pycounts-tt25/badge/?version=latest)](https://fml-doc-gen.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/fml-doc-gen/badge/?version=latest)](https://fml-doc-gen.readthedocs.io/en/latest/?badge=latest)
 
 ## Summary
 
