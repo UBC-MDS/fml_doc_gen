@@ -1,5 +1,7 @@
 # fml_doc_gen
 
+[![Documentation Status](https://fml-doc-gen.readthedocs.io/projects/pycounts-tt25/badge/?version=latest)](https://fml-doc-gen.readthedocs.io/en/latest/?badge=latest)
+
 ## Summary
 
 `fml_doc_gen` is a Python package designed to simplify the process of writing docstrings for user-defined functions. It offers an automated way to generate docstring templates or fully detailed docstrings through integration with the OpenAI API. By streamlining documentation, it helps developers save time, improve code readability, and maintain consistent documentation standards across projects.
