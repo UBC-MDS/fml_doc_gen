@@ -20,6 +20,7 @@ sphinx-autoapi = "^3.4.0"
 sphinx-rtd-theme = "^3.0.2"
 jupyter = "^1.1.1"
 myst-nb = "^1.1.2"
+furo = "^2024.8.6"
 
 [tool.semantic_release]
 version_toml = [
