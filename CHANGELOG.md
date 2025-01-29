@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v3.0.0 (2025-01-29)
+
+### Bug Fixes
+
+- Fix readme to have badge for code coverage
+  ([`6d52fdd`](https://github.com/UBC-MDS/fml_doc_gen/commit/6d52fdd57778f2b33c9d4006b041d57ec9c17047))
+
+
 ## v2.0.0 (2025-01-29)
 
 ### Features
