@@ -1,6 +1,7 @@
 # fml_doc_gen
 
 [![Documentation Status](https://readthedocs.org/projects/fml-doc-gen/badge/?version=latest)](https://fml-doc-gen.readthedocs.io/en/latest/?badge=latest)
+[![codecov](https://codecov.io/gh/UBC-MDS/fml_doc_gen/graph/badge.svg?token=0KMZ9OEBGI)](https://app.codecov.io/gh/UBC-MDS/fml_doc_gen)
 
 ## Authors
 
