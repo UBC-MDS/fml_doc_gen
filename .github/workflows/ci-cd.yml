@@ -44,7 +44,7 @@ jobs:
     needs: ci
 
     # Only run this job if new work is merged to "main" via pull request
-    if: github.event_name == 'pull_request' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     # Set up operating system
     runs-on: ubuntu-latest
