@@ -43,8 +43,8 @@ jobs:
     # Only run this job if the "ci" job passes
     needs: ci
 
-    # Only run this job if new work is pushed to "main"
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # Only run this job if new work is merged to "main" via pull request
+    if: github.event_name == 'pull_request' && github.ref == 'refs/heads/main'
 
     # Set up operating system
     runs-on: ubuntu-latest
@@ -60,6 +60,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Use Python Semantic Release to prepare release
         id: release
@@ -80,7 +81,7 @@ jobs:
             pip install \
             --index-url https://test.pypi.org/simple/ \
             --extra-index-url https://pypi.org/simple \
-            fml
+            fml_doc_gen
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
