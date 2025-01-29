@@ -15,7 +15,7 @@
 ## Installation
 
 ```bash
-$ pip install fml_doc_gen
+$ pip install fml_doc_gen 
 ```
 
 ## Usage
