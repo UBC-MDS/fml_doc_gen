@@ -10,7 +10,7 @@
 
 ## Authors
 
-- Farhan Bin Faisal  xx
+- Farhan Bin Faisal  x
 - Michael Suriawan  
 - Lukman Lateef
 
