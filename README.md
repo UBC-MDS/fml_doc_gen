@@ -1,7 +1,12 @@
 # fml_doc_gen
 
-[![Documentation Status](https://readthedocs.org/projects/fml-doc-gen/badge/?version=latest)](https://fml-doc-gen.readthedocs.io/en/latest/?badge=latest)
-[![codecov](https://codecov.io/gh/UBC-MDS/fml_doc_gen/graph/badge.svg?token=0KMZ9OEBGI)](https://app.codecov.io/gh/UBC-MDS/fml_doc_gen)
+| | |
+| --- | --- |
+| Documentation | [![Documentation Status](https://readthedocs.org/projects/fml-doc-gen/badge/?version=latest)](https://fml-doc-gen.readthedocs.io/en/latest/?badge=latest) |
+| Testing | [![codecov](https://codecov.io/gh/UBC-MDS/fml_doc_gen/graph/badge.svg?token=0KMZ9OEBGI)](https://app.codecov.io/gh/UBC-MDS/fml_doc_gen) |
+| Package | [![PyPI Latest Release](https://img.shields.io/pypi/v/fml_doc_gen.svg)](https://pypi.org/project/fml-doc-gen) |
+| Downloads | [![PyPI Downloads](https://img.shields.io/pypi/dm/fml_doc_gen.svg?label=PyPI%20downloads)](https://pypi.org/project/fml-doc-gen) |
+| Supported Versions | [![Python Version](https://img.shields.io/pypi/pyversions/fml_doc_gen)](https://pypi.org/project/fml-doc-gen) |
 
 ## Authors
 
@@ -52,6 +57,10 @@ print(generate_docstring_template(square, output_file=None))
 `fml_doc_gen` fits into the Python ecosystem as a specialized tool for automating function documentation. While other Python packages like [`sphinx`](https://www.sphinx-doc.org/) and [`pydoc`](https://docs.python.org/3/library/pydoc.html) exist for generating documentation from docstrings, there are no widely known packages that automatically generate docstrings themselves using AI. This makes `fml_doc_gen` unique in its approach by leveraging OpenAI's capabilities to produce high-quality docstrings with minimal effort from the developer.
 
 If you are aware of a similar tool, feel free to contribute to our documentation by suggesting it!
+
+## Discussion and Improvements
+
+Found a bug? or have an idea on how to improve `fml_doc_gen` further? Feel free to open an issue with the appropriate label (bug or features) under the issue section [here](https://github.com/UBC-MDS/fml_doc_gen/issues).
 
 ## Contributing
 
