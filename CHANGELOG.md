@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v3.0.1 (2025-01-30)
+
+### Bug Fixes
+
+- Add bug feat section to readme addressed by michaels
+  ([`0ed8f7a`](https://github.com/UBC-MDS/fml_doc_gen/commit/0ed8f7a2338df5633c5a9448cbedd7c49e2fe19a))
+
+- Improve readme badges addressed by michaels
+  ([`2a19a57`](https://github.com/UBC-MDS/fml_doc_gen/commit/2a19a574d355f1a3cfe6de9d2fdd5d63ae7e1f3d))
+
+
 ## v3.0.0 (2025-01-29)
 
 ### Bug Fixes
