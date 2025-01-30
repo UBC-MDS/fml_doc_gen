@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v3.0.4 (2025-01-30)
+
+### Bug Fixes
+
+- Changed GITHUB TOKEN to PAT => allows use us ruleset
+  ([`3ec85d3`](https://github.com/UBC-MDS/fml_doc_gen/commit/3ec85d3b1144325b6109f41249f92236a9662412))
+
+
 ## v3.0.3 (2025-01-30)
 
 ### Bug Fixes
