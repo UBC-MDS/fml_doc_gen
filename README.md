@@ -1,7 +1,10 @@
 # fml_doc_gen
 
-[![Documentation Status](https://readthedocs.org/projects/fml-doc-gen/badge/?version=latest)](https://fml-doc-gen.readthedocs.io/en/latest/?badge=latest)
-[![codecov](https://codecov.io/gh/UBC-MDS/fml_doc_gen/graph/badge.svg?token=0KMZ9OEBGI)](https://app.codecov.io/gh/UBC-MDS/fml_doc_gen)
+| | |
+| --- | --- |
+| Documentation | [![Documentation Status](https://readthedocs.org/projects/fml-doc-gen/badge/?version=latest)](https://fml-doc-gen.readthedocs.io/en/latest/?badge=latest) |
+| Testing | [![codecov](https://codecov.io/gh/UBC-MDS/fml_doc_gen/graph/badge.svg?token=0KMZ9OEBGI)](https://app.codecov.io/gh/UBC-MDS/fml_doc_gen) |
+| Package | [![PyPI Latest Release](https://img.shields.io/pypi/v/fml_doc_gen.svg)](https://pypi.org/project/fml-doc-gen) [![PyPI Downloads](https://img.shields.io/pypi/dm/fml_doc_gen.svg?label=PyPI%20downloads)](https://pypi.org/project/fml-doc-gen) [![Python Version](https://img.shields.io/pypi/pyversions/fml_doc_gen)](https://pypi.org/project/fml-doc-gen)|
 
 ## Authors
 
