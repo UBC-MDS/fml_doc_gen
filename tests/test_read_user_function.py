@@ -154,5 +154,5 @@ def test_optional_type():
 
     dto = read_user_function(sample_func)
     assert dto.name == "sample_func"
-    assert "Optional" in str(dto.output_type)
+    assert "Optional" in str(dto.output_type)    
     assert "Optional" in str(dto.inputs[0][1])

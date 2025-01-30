@@ -1,5 +1,5 @@
 import inspect
-from typing import Callable
+from typing import Callable, Optional
 
 from fml_doc_gen.func_dto import FunctionDTO
 
