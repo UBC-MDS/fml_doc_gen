@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v3.0.2 (2025-01-30)
+
+### Bug Fixes
+
+- Quick typo fix for docs
+  ([`e4280e7`](https://github.com/UBC-MDS/fml_doc_gen/commit/e4280e723d3bd424e50e069c143b6fbb5a9a43ed))
+
+
 ## v3.0.1 (2025-01-30)
 
 ### Bug Fixes
