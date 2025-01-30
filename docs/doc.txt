@@ -5,11 +5,11 @@
     Parameters:
     ----------
     
-    base: int
+    base: <class 'int'>
     ### INSERT PARAMETER DEFINITION HERE ###
     
 
-    pow: int
+    pow: <class 'int'>
     ### INSERT PARAMETER DEFINITION HERE ###
     
 
@@ -17,7 +17,7 @@
     
     Returns:
     -------
-    int
+    <class 'int'>
         ### INSERT ADDITIONAL FUNCTION OUTPUT INFORMATION HERE ###
 
       
