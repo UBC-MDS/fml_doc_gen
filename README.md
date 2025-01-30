@@ -62,6 +62,14 @@ If you are aware of a similar tool, feel free to contribute to our documentation
 
 Found a bug? or have an idea on how to improve `fml_doc_gen` further? Feel free to open an issue with the appropriate label (bug or features) under the issue section [here](https://github.com/UBC-MDS/fml_doc_gen/issues).
 
+## Running Tests
+
+To run tests and check code coverage, use the following command in the project root:
+
+```bash
+poetry run pytest --cov=fml_doc_gen --cov-report=term-missing tests/
+```
+
 ## Contributing
 
 Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
