@@ -10,7 +10,7 @@
 
 ## Authors
 
-- Farhan Bin Faisal
+- Farhan Bin Faisal trying release_token
 - Michael Suriawan  
 - Lukman Lateef
 
