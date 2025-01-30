@@ -1,6 +1,20 @@
 # CHANGELOG
 
 
+## v3.0.3 (2025-01-30)
+
+### Bug Fixes
+
+- Quick test semantic release via PR
+  ([`9871081`](https://github.com/UBC-MDS/fml_doc_gen/commit/9871081492f7775ffdda9aec51d67f38fdce70b4))
+
+- Quick typo fix for docs
+  ([`c73f1d6`](https://github.com/UBC-MDS/fml_doc_gen/commit/c73f1d6d5f626d9c1f3f82928e38966e200a7811))
+
+- Release token use
+  ([`3f9e445`](https://github.com/UBC-MDS/fml_doc_gen/commit/3f9e4458428be1df92456d3fd7effc5cdd75cf7c))
+
+
 ## v3.0.2 (2025-01-30)
 
 ### Bug Fixes
