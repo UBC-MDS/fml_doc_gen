@@ -1,3 +1,6 @@
+# Credit: Some test cases were auto-generated using Cursor AI.
+# Additional modifications and refinements were made for completeness and correctness.
+
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
