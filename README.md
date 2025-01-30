@@ -43,7 +43,7 @@ print(generate_docstring_template(square, output_file=None))
 - **`generate_docstring_template(func: Callable, output_file: str, auto_generate: bool = False) -> str`**:
   The main end-user function that generates either a docstring template with placeholders or a fully detailed docstring if `auto_generate` is set to `True`.
 
-- **`read_user_function(func: Callable) -> str`**: 
+- **`read_user_function(func: Callable) -> FunctionDTO`**: 
   Reads and extracts the signature and existing docstring (if any) of a given user-defined function.
 
 - **`generate_template(func_signature: str) -> str`**: 
