@@ -1,7 +1,7 @@
-from typing import Callable
-from fml_doc_gen.func_dto import FunctionDTO
 import inspect
+from typing import Callable, Optional
 
+from fml_doc_gen.func_dto import FunctionDTO
 
 def read_user_function(func: Callable) -> FunctionDTO:
     """
@@ -14,34 +14,33 @@ def read_user_function(func: Callable) -> FunctionDTO:
 
     Returns
     -------
-    str
-        The function signature as a string.
+    FunctionDTO
+        The function signature as a FunctionDTO object.
 
+    Raises
+    ------
+    TypeError
+        If func is not a callable object.
+    
     Examples
     --------
     >>> def example_func(a, b):
     ...     return a + b
     ...
-    >>> read_user_function(example_func)
-    'example_func(a, b)'
+    >>> sigDTO = read_user_function(example_func)
     """
+    if not callable(func):
+        raise TypeError("Expected a callable function")
+    
     source_lines = inspect.getsourcelines(func)
-    function_header = source_lines[0][0].strip()
-
-    name = function_header.split('(')[0].split(' ')[1]
-    return_type = None
-    inputs = function_header.split('(')[1].split(')')[0].split(',')
-    inputs = [
-        (
-            thing.split(':')[0].strip(), 
-            thing.split(':')[1].strip() if ':' in thing else None
-        ) for thing in inputs
-    ]
+    signature = inspect.signature(func)
+    name = func.__name__
    
-    if '->' in function_header:
-        return_type = function_header.split('->')[1].split(':')[0].strip()
+    return_type = None if signature.return_annotation is inspect.Signature.empty else str(signature.return_annotation)
    
-    if len(inputs) == 1 and inputs[0] == ('', None):
-        inputs = []
+    inputs = []
+    for param_name, param in signature.parameters.items():
+        param_type = None if param.annotation is inspect.Parameter.empty else str(param.annotation)
+        inputs.append((param_name, param_type))
 
-    return FunctionDTO(name, output = return_type, inputs = inputs)
+    return FunctionDTO(name=name, output=return_type, inputs=inputs, src=source_lines)

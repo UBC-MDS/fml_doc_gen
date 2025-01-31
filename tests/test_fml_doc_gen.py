@@ -14,11 +14,11 @@ def valid_docstring():
     Parameters:
     ----------
     
-    base: int
+    base: <class 'int'>
     ### INSERT PARAMETER DEFINITION HERE ###
     
 
-    pow: int
+    pow: <class 'int'>
     ### INSERT PARAMETER DEFINITION HERE ###
     
 
@@ -26,7 +26,7 @@ def valid_docstring():
     
     Returns:
     -------
-    int
+    <class 'int'>
         ### INSERT ADDITIONAL FUNCTION OUTPUT INFORMATION HERE ###
 
       
@@ -44,7 +44,7 @@ def test_generate_docstring_template(valid_docstring):
         file_path = temp_file.name  
 
     try:
-        expected = '\n    square: \n    ### INSERT FUNCTION DEFINITION HERE ###\n    \n    Parameters:\n    ----------\n    \n    base: int\n    ### INSERT PARAMETER DEFINITION HERE ###\n    \n\n    pow: int\n    ### INSERT PARAMETER DEFINITION HERE ###\n    \n\n\n    \n    Returns:\n    -------\n    int\n        ### INSERT ADDITIONAL FUNCTION OUTPUT INFORMATION HERE ###\n\n      \n    Examples:\n    --------\n    ### INSERT FUNCTION EXAMPLE USAGES HERE ###\n'
+        expected = """\n    square: \n    ### INSERT FUNCTION DEFINITION HERE ###\n    \n    Parameters:\n    ----------\n    \n    base: <class 'int'>\n    ### INSERT PARAMETER DEFINITION HERE ###\n    \n\n    pow: <class 'int'>\n    ### INSERT PARAMETER DEFINITION HERE ###\n    \n\n\n    \n    Returns:\n    -------\n    <class 'int'>\n        ### INSERT ADDITIONAL FUNCTION OUTPUT INFORMATION HERE ###\n\n      \n    Examples:\n    --------\n    ### INSERT FUNCTION EXAMPLE USAGES HERE ###\n"""
         actual = generate_docstring_template(func=square, output_file=file_path, auto_generate=False)
         assert expected == actual
         

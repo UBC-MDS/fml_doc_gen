@@ -38,12 +38,16 @@ def square(base: int, pow: int) -> int:
 print(generate_docstring_template(square, output_file=None))
 ```
 
+## OpenAI Dependency:
+
+`fml_doc_gen` requires an OpenAI API key to generate docstrings. You can set your API key using the `OPENAI_API_KEY` environment variable. Check our our documentation [here](https://readthedocs.org/projects/fml-doc-gen/badge/?version=latest) for more information.
+
 ## Functions Included
 
 - **`generate_docstring_template(func: Callable, output_file: str, auto_generate: bool = False) -> str`**:
   The main end-user function that generates either a docstring template with placeholders or a fully detailed docstring if `auto_generate` is set to `True`.
 
-- **`read_user_function(func: Callable) -> str`**: 
+- **`read_user_function(func: Callable) -> FunctionDTO`**: 
   Reads and extracts the signature and existing docstring (if any) of a given user-defined function.
 
 - **`generate_template(func_signature: str) -> str`**: 
@@ -61,6 +65,14 @@ If you are aware of a similar tool, feel free to contribute to our documentation
 ## Discussion and Improvements
 
 Found a bug? or have an idea on how to improve `fml_doc_gen` further? Feel free to open an issue with the appropriate label (bug or features) under the issue section [here](https://github.com/UBC-MDS/fml_doc_gen/issues).
+
+## Running Tests
+
+To run tests and check code coverage, use the following command in the project root:
+
+```bash
+poetry run pytest --cov=fml_doc_gen --cov-report=term-missing tests/
+```
 
 ## Contributing
 
