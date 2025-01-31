@@ -1,6 +1,89 @@
 # CHANGELOG
 
 
+## v3.1.0 (2025-01-31)
+
+### Bug Fixes
+
+- Minor fix in test_fml_doc_gen integration test
+  ([`cda0fce`](https://github.com/UBC-MDS/fml_doc_gen/commit/cda0fceec667a15b4a6959469fcacfa8593a7101))
+
+- Small bug fix in read_use_function test suite
+  ([`53c0eeb`](https://github.com/UBC-MDS/fml_doc_gen/commit/53c0eebfe5db1cf7f5a1e1e40f9d62d178eba17e))
+
+### Documentation
+
+- Updated Jupyter notebook with auto_generate usage documentation
+  ([`7a7fafe`](https://github.com/UBC-MDS/fml_doc_gen/commit/7a7fafe494b76e0011a3483f007d11478e6d7deb))
+
+- Updated example notebook to demonstrate the usage of auto_generate - Added step-by-step
+  instructions for setting up OpenAI API key - Included example function calls and expected outputs
+  - Added dotenv and openai dependencies to toml
+
+- Updated Jupyter notebook with auto_generate usage documentation
+  ([`fb15a91`](https://github.com/UBC-MDS/fml_doc_gen/commit/fb15a915929fc13df0661c8007f1a95fa95a86a2))
+
+- Updated example Jupyter notebook to demonstrate the usage of generate_docstring_template wih
+  auto_generate - Added step-by-step instructions for setting up OpenAI API key - Included example
+  function calls and expected outputs - Added dotenv and open ai dependency to toml file
+
+- **readme**: Add test running instructions
+  ([`9331a29`](https://github.com/UBC-MDS/fml_doc_gen/commit/9331a29e72c580b85cd670a685da90a369501aaf))
+
+Added a section to the README detailing how to run tests using pytest and measure code coverage with
+  poetry.
+
+- **readme**: Function return type in README
+  ([`8b195f0`](https://github.com/UBC-MDS/fml_doc_gen/commit/8b195f0477c885deb6b34b953553c372c8a2fd42))
+
+### Features
+
+- Add AI-powered docstring generation function
+  ([`8df0b50`](https://github.com/UBC-MDS/fml_doc_gen/commit/8df0b50d426b534ed241485658caf6976f7bbff1))
+
+Added `fill_docstring_with_ai` function to automatically generate detailed docstrings using OpenAI's
+  GPT-4. This function takes a docstring template and function source as inputs and returns a
+  completed docstring.
+
+- Loads API key using `dotenv` - Uses OpenAI's API for docstring completion - Implements error
+  handling for missing inputs and API failures
+
+- Add PEP8 compliance and type checking to read_user_function
+  ([`cf98f06`](https://github.com/UBC-MDS/fml_doc_gen/commit/cf98f061f96a7f471ebf93de32b807ce898a4245))
+
+- Implemented explicit type checking for function input - Reformatted code to align with PEP8
+  standards - Updated docstrings for clarity and consistency
+
+Example Usage: >>> def example_func(a, b): ... return a + b ... >>> sigDTO =
+  read_user_function(example_func)
+
+- Integrate fill_docstring_with_ai (autogeneration for docstrings) with error handling
+  ([`b68eb96`](https://github.com/UBC-MDS/fml_doc_gen/commit/b68eb96977a51b02c4b8b447cf95966d73bb5f89))
+
+- Added `auto_generate` option to `generate_docstring_template` to automatically generate docstrings
+  using OpenAI's API. - Implemented error handling for missing function input (`ValueError`). -
+  Ensured PEP 8 compliance with proper indentation, spacing, and docstring format.
+
+### Testing
+
+- Add 100% coverage test suite for read_user_function
+  ([`8b41bae`](https://github.com/UBC-MDS/fml_doc_gen/commit/8b41baec5e722a9757a6e2390387f90fbe92b3d2))
+
+- Added comprehensive unit tests for `read_user_function`, covering: - Functions with and without
+  parameters - Functions with type hints, default values, and return types - Functions using
+  `Optional` and `None` type annotations - Complex return types such as `list[int]` - Functions
+  executing return statements - Error handling for invalid input
+
+- Future improvement: Add checks for `src` attribute inside the returned object.
+
+- **autogen**: Achieve 100% test coverage for autogen (fill_docstring_with_ai)
+  ([`f07d087`](https://github.com/UBC-MDS/fml_doc_gen/commit/f07d087d872fb87c26c2ad4ddcaddfb0adca32d2))
+
+- Added missing test cases to cover all code paths in `fill_docstring_with_ai` - Mocked API calls to
+  verify correct request formation and error handling - Ensured exceptions are raised for invalid
+  inputs and API failures - Included credit for auto-generated test cases
+
+
 ## v3.0.4 (2025-01-30)
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fml_doc_gen"
-version = "3.0.4"
+version = "3.1.0"
 description = "doc string generator"
 authors = ["Farhan Faisal", "Michael Suriawan", "Lukman Lateef"]
 license = "MIT"
