@@ -38,6 +38,10 @@ def square(base: int, pow: int) -> int:
 print(generate_docstring_template(square, output_file=None))
 ```
 
+## OpenAI Dependency:
+
+`fml_doc_gen` requires an OpenAI API key to generate docstrings. You can set your API key using the `OPENAI_API_KEY` environment variable. Check our our documentation [here](https://readthedocs.org/projects/fml-doc-gen/badge/?version=latest) for more information.
+
 ## Functions Included
 
 - **`generate_docstring_template(func: Callable, output_file: str, auto_generate: bool = False) -> str`**:
