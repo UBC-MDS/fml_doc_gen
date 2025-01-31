@@ -40,10 +40,10 @@ If you are proposing a feature:
 
 ## Get Started!
 
-Ready to contribute? Here's how to set up `fml` for local development.
+Ready to contribute? Here's how to set up `fml_doc_gen` for local development.
 
-1. Download a copy of `fml` locally.
-2. Install `fml` using `poetry`:
+1. Download a copy of `fml_doc_gen` locally.
+2. Install `fml_doc_gen` using `poetry`:
 
     ```console
     $ poetry install
