@@ -1,6 +1,20 @@
 # CHANGELOG
 
 
+## v3.1.1 (2025-01-31)
+
+### Bug Fixes
+
+- Changed fml to fml_doc_gen in contributing.md for consistency
+  ([`65f7021`](https://github.com/UBC-MDS/fml_doc_gen/commit/65f7021ba640ff2c9e430daa176b75762a67a44e))
+
+- Changed fml to fml_doc_gen in contributing.md for consistency
+  ([`ef239a8`](https://github.com/UBC-MDS/fml_doc_gen/commit/ef239a80b4e46c4f456a77ae3ab174bbfcec3997))
+
+- Temp fixed the error on example.ipynb
+  ([`189e81b`](https://github.com/UBC-MDS/fml_doc_gen/commit/189e81bb4f792b1131f14921fb6c0000207485c0))
+
+
 ## v3.1.0 (2025-01-31)
 
 ### Bug Fixes
