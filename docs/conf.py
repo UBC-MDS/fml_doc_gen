@@ -6,7 +6,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u"fml"
+project = u"fml_doc_gen"
 copyright = u"2025, Farhan Faisal, Michael Suriawan, Lukman Lateef"
 author = u"Farhan Faisal, Michael Suriawan, Lukman Lateef"
 
